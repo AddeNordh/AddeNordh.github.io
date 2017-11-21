@@ -70,7 +70,7 @@ nav.main-nav ul li {
     color: #def;
     font-size: 60px!important;
     position: relative;
-    transition: all .5s ease;
+    transition: all .5s ease-in-out;
 }
 
 nav.main-nav ul li:nth-child(odd) {
