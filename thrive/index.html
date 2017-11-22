@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T H R I V E</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/mediaQuerys.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="navbar navbarShow">
+          <a class="logoButton" target="_blank" href="http://www.thrivestore.se/">
+            <img class="logoText" src="imgs/logoText.png" alt="Thrive, conscious fashion">
+          </a>
+        </div> <!-- End navbar -->
+		<button class="hamburger" onclick="myFunction()">☰</button>
+        <div id="sidebar">
+          <ul>
+            <li class="sidebarList"><a class="sidebarLinks" href="http://www.thrivestore.se/">Store</a></li>
+            <li class="sidebarList"><a class="sidebarLinks" href="http://www.thrivestore.se/varumarken">Brands</a></li>
+            <li class="sidebarList"><a class="sidebarLinks" href="http://www.thrivestore.se/thrive-butik">Contact</a></li>
+          </ul>
+        </div> <!-- End sidebar -->
+      </div> <!-- End header -->
+        <div class="main">
+          <div class="part1">
+            <img class="logoImg" src="imgs/logoSymbolWhite.png" alt="Thrive logo">
+            <h2 class="textPart1">Unique, Sustainable <br> Fashion.</h2>
+            <a href="https://thrivestore.se" target="_blank"><button type="button" class="store-btn nav-btn" name="button">Go to our store
+                <i class="fa fa-angle-right btn-arrow" aria-hidden="true"></i>
+            </button></a>
+			<div class="hide">
+
+			</div>
+          </div> <!--End part 1 -->
+
+          <!-- Stories part BEGINS -->
+          <div class="stories-slide-wrapper section">
+			  <div class="stories-head">
+
+              <h1>INFINITELY DIFFERENT STORIES.</h1>
+              <div class="slide-opt">
+				  <svg class="arrow arrow_left" width="39" height="74" viewBox="0 0 39 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					  <g id="Canvas" transform="translate(6502 -381)">
+					  <g id="Arrow_right">
+					  <g id="Vector">
+						  <use xlink:href="#path0_stroke" transform="matrix(6.12323e-17 1 -1 6.12323e-17 -6464 382)" fill="#BD9B5B"/>
+					  </g>
+					  </g>
+					  </g>
+					  <defs>
+						  <path id="path0_stroke" d="M 36 36L 35.2929 36.7071L 36 37.4142L 36.7071 36.7071L 36 36ZM -0.707107 0.707107L 35.2929 36.7071L 36.7071 35.2929L 0.707107 -0.707107L -0.707107 0.707107ZM 36.7071 36.7071L 72.7071 0.707107L 71.2929 -0.707107L 35.2929 35.2929L 36.7071 36.7071Z"/>
+					  </defs>
+				  </svg>
+                  <ul>
+                      <li class="person">
+                          <svg class="person stories-svg-icon svg-icon" width="45px" viewbox="00 00 600 600">
+                              <use xlink:href="imgs/svg/icon_Persona.svg#Layer_2"></use>
+                              <use xlink:href="imgs/svg/icon_Persona.svg#Layer_1-2"></use>
+                        </svg>
+                      </li>
+                      <li class="shirt">
+                          <svg class="shirt stories-svg-icon svg-icon" width="40px" viewbox="00 00 600 600">
+                              <use xlink:href="imgs/svg/icon_shirt.svg#Layer_2"></use>
+                              <use xlink:href="imgs/svg/icon_shirt.svg#Layer_1-2"></use>
+                        </svg>
+                      </li>
+                      <li class="map">
+                          <svg class="map stories-svg-icon svg-icon" width="40px" viewbox="00 00 600 600">
+                              <use xlink:href="imgs/svg/icon_map.svg#Layer_2"></use>
+                              <use xlink:href="imgs/svg/icon_map.svg#Layer_1-2"></use>
+                        </svg>
+                      </li>
+					  <svg class="arrow arrow_right" width="39" height="74" viewBox="0 0 39 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						  <g id="Canvas" transform="translate(5297 -381)">
+						  <g id="Arrow_right">
+						  <g id="Vector">
+							  <use xlink:href="#path0_stroke" transform="matrix(6.12323e-17 -1 1 6.12323e-17 -5296 454)" fill="#BD9B5B"/>
+						  </g>
+						  </g>
+						  </g>
+					  <defs>
+						  <path id="path0_stroke" d="M 36 36L 35.2929 36.7071L 36 37.4142L 36.7071 36.7071L 36 36ZM -0.707107 0.707107L 35.2929 36.7071L 36.7071 35.2929L 0.707107 -0.707107L -0.707107 0.707107ZM 36.7071 36.7071L 72.7071 0.707107L 71.2929 -0.707107L 35.2929 35.2929L 36.7071 36.7071Z"/>
+					  </defs>
+					  </svg>
+                  </ul>
+                  <h3 id="story-header" style="opacity: 0;"></h3>
+              </div>
+		  </div>
+
+              <div class="slider-container slideContainer" id="container">
+                  <div class="slide-item slide-div slide-person">
+                      <div class="img-text">
+                          <p>This is Hannah – a conscious, fashionable girl struggling to find brands that sell high quality clothes which also go with her style and aren’t the same thing everyone else wears.</p>
+                      </div>
+                      <div class="slide-img">
+                          <img src="imgs/background-imgs/hannah-1x.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class="slide-item slide-div slide-jacket">
+                      <div class="img-text">
+                          <p>This is the <span>Hoodlamb Parka.</span> It´s made of hemp, organic cotton recycled polyester and acrylic</p><br>
+                          <p>Hannah buys one of the five models that will ever be sold at <span>T H R I V E</span></p>
+                      </div>
+                      <div class="slide-img jacket">
+                          <img src="imgs/atn1024_hoodlamb_jacka-10.png" alt="">
+                      </div>
+                  </div>
+                  <div class="slide-item slide-div slide-map">
+                      <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+          <!-- Stories part ENDS -->
+          <!-- Part 3 - Exclusive collections BEGINS -->
+          <div class="part3-wrapper section">
+			<h3 class="hTextPart3">Small, exclusive <br> collections.</h3>
+			<div class="part3-flex-wrapper">
+            	<img class="imgPart3" src="imgs/part3.png" alt="">
+				<div class="part3-text-wrapper">
+					<p class="pTextPart3">Our clothes are carefully selected in small, exclusive collections
+		              from some of the most innovative and conscious designers, manufacturers
+		              and brands around the world.</p>
+		            <p class="pTextPart3">This means that all of our products are limited edition.
+		              If you see something you like – get it while it lasts!</p>
+				</div>
+			</div>
+          </div>
+          <!-- Part 3 - Exclusive collections ENDS -->
+
+          <!-- Part 4 - Sustainable in every way BEGINS -->
+
+          <div class="sustain-wrapper section">
+                <div class="sustain-header sustain-item">
+                    <h3>Sustainable in <br>every way.</h3>
+                </div>
+                <div class="sustain-options sustain-item">
+                    <ul>
+                        <li>
+                            <svg class="sustain-svg-icon svg-icon" width="80px" viewbox="00 00 600 600">
+                                <use xlink:href="imgs/svg/icon_Organic.svg#Layer_1"></use>
+                                <use xlink:href="imgs/svg/icon_Organic.svg#Layer_1-2"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="sustain-svg-icon svg-icon" width="80px" viewbox="00 00 600 580">
+                                <use xlink:href="imgs/svg/icon_fairtrade.svg#Layer_1"></use>
+                                <use xlink:href="imgs/svg/icon_fairtrade.svg#Layer_1-2"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="sustain-svg-icon svg-icon" width="80px" viewbox="00 00 600 600">
+                                <use xlink:href="imgs/svg/icon_toxic_free.svg#Layer_1"></use>
+                                <use xlink:href="imgs/svg/icon_toxic_free.svg#Layer_1-2"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="sustain-svg-icon svg-icon" width="80px" viewbox="00 00 600 600">
+                                <use xlink:href="imgs/svg/icon_cruelty_free.svg#Layer_1"></use>
+                                <use xlink:href="imgs/svg/icon_cruelty_free.svg#Layer_1-2"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="sustain-svg-icon svg-icon" width="110px" viewbox="20 -20 700 540">
+                                <use xlink:href="imgs/svg/icon_quality.svg#Layer_1"></use>
+                                <use xlink:href="imgs/svg/icon_quality.svg#Layer_1-2"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="sustain-svg-icon svg-icon" width="60px" viewbox="00 00 600 850">
+                                <use xlink:href="imgs/svg/icon_map.svg#Layer_1"></use>
+                                <use xlink:href="imgs/svg/icon_map.svg#Layer_1-2"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sustain-slider-wrapper slideContainer">
+					<svg class="arrow arrow_left" width="39" height="74" viewBox="0 0 39 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  					  <g id="Canvas" transform="translate(6502 -381)">
+  					  <g id="Arrow_right">
+  					  <g id="Vector">
+  						  <use xlink:href="#path0_stroke" transform="matrix(6.12323e-17 1 -1 6.12323e-17 -6464 382)" fill="#BD9B5B"/>
+  					  </g>
+  					  </g>
+  					  </g>
+  					  <defs>
+  						  <path id="path0_stroke" d="M 36 36L 35.2929 36.7071L 36 37.4142L 36.7071 36.7071L 36 36ZM -0.707107 0.707107L 35.2929 36.7071L 36.7071 35.2929L 0.707107 -0.707107L -0.707107 0.707107ZM 36.7071 36.7071L 72.7071 0.707107L 71.2929 -0.707107L 35.2929 35.2929L 36.7071 36.7071Z"/>
+  					  </defs>
+  				  </svg>
+				  <svg class="arrow arrow_right" width="39" height="74" viewBox="0 0 39 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  					  <g id="Canvas" transform="translate(5297 -381)">
+  					  <g id="Arrow_right">
+  					  <g id="Vector">
+  						  <use xlink:href="#path0_stroke" transform="matrix(6.12323e-17 -1 1 6.12323e-17 -5296 454)" fill="#BD9B5B"/>
+  					  </g>
+  					  </g>
+  					  </g>
+  				  <defs>
+  					  <path id="path0_stroke" d="M 36 36L 35.2929 36.7071L 36 37.4142L 36.7071 36.7071L 36 36ZM -0.707107 0.707107L 35.2929 36.7071L 36.7071 35.2929L 0.707107 -0.707107L -0.707107 0.707107ZM 36.7071 36.7071L 72.7071 0.707107L 71.2929 -0.707107L 35.2929 35.2929L 36.7071 36.7071Z"/>
+  				  </defs>
+  				  </svg>                    <div class="hide sustain-hide"></div>
+                    <div class="sustain-slide-content">
+                        <div class="sustain-slide-item slide-div">
+                            <div class="ssi-logo">
+                                <svg class="sustain-icon svg-icon-logo" width="300" height="150" viewbox="00 -200 350 600" fill="#BD9B5B">
+                                    <use xlink:href="imgs/svg/icon_Organic.svg#Layer_1"></use>
+                                    <use xlink:href="imgs/svg/icon_Organic.svg#Layer_1-2"></use>
+                                </svg>
+                            </div>
+                            <div class="ssi-title">
+                                <h3>Organic</h3>
+                            </div>
+                            <div class="ssi-text">
+                                <p>Our clothes are made of natural fabrics; like lyocell, hemp and organic cotton, that are produced
+									without the use of toxic pesticides, fertilizers and GMO’s that are proven to harm the environment, farmers, producers as well as the end consumer.</p>
+                            </div>
+                        </div>
+                        <div class="sustain-slide-item slide-div">
+                            <div class="ssi-logo">
+                                <svg class="sustain-icon svg-icon-logo" width="300" height="150" viewbox="00 -200 350 600" fill="#BD9B5B">
+                                    <use xlink:href="imgs/svg/icon_fairtrade.svg#Layer_1"></use>
+                                    <use xlink:href="imgs/svg/icon_fairtrade.svg#Layer_1-2"></use>
+                                </svg>
+                            </div>
+                            <div class="ssi-title">
+                                <h3>Fair labor</h3>
+                            </div>
+                            <div class="ssi-text">
+                                <p>The workers who made our clothes earn a fair and living wage, in fair and safe workplace conditions.</p>
+                            </div>
+                        </div>
+						<div class="sustain-slide-item slide-div">
+                            <div class="ssi-logo">
+                                <svg class="sustain-icon svg-icon-logo" width="300" height="150" viewbox="00 -200 350 600" fill="#BD9B5B">
+                                    <use xlink:href="imgs/svg/icon_toxic_free.svg#Layer_1"></use>
+                                    <use xlink:href="imgs/svg/icon_toxic_free.svg#Layer_1-2"></use>
+                                </svg>
+                            </div>
+                            <div class="ssi-title">
+                                <h3>Toxic free</h3>
+                            </div>
+                            <div class="ssi-text">
+                                <p>“Organic” doesn’t always mean toxic free. It might only apply to the cultivation - the garments are likely treated
+									with more or less dangerous chemicals in processing and staining them. T H R I V E, however, guarantees you a non-toxic
+									end product.</p>
+                            </div>
+                        </div>
+						<div class="sustain-slide-item slide-div">
+                            <div class="ssi-logo">
+                                <svg class="sustain-icon svg-icon-logo" width="300" height="150" viewbox="00 -200 350 600" fill="#BD9B5B">
+                                    <use xlink:href="imgs/svg/icon_cruelty_free.svg#Layer_1"></use>
+                                    <use xlink:href="imgs/svg/icon_cruelty_free.svg#Layer_1-2"></use>
+                                </svg>
+                            </div>
+                            <div class="ssi-title">
+                                <h3>Cruelty free</h3>
+                            </div>
+                            <div class="ssi-text">
+                                <p>Our store is PETA Vegan approved, assuring you that no animals were harmed in the production of the clothes.</p>
+                            </div>
+                        </div>
+						<div class="sustain-slide-item slide-div">
+                            <div class="ssi-logo">
+                                <svg class="sustain-icon svg-icon-logo" width="300" height="150" viewbox="00 -200 350 600" fill="#BD9B5B">
+                                    <use xlink:href="imgs/svg/icon_quality.svg#Layer_1"></use>
+                                    <use xlink:href="imgs/svg/icon_quality.svg#Layer_1-2"></use>
+                                </svg>
+                            </div>
+                            <div class="ssi-title">
+                                <h3>High quality</h3>
+                            </div>
+                            <div class="ssi-text">
+                                <p>Our clothes were carefully crafted and are designed to last for many years.</p>
+                            </div>
+                        </div>
+						<div class="sustain-slide-item slide-div">
+                            <div class="ssi-logo">
+                                <svg class="sustain-icon svg-icon-logo" width="300" height="150" viewbox="00 -200 350 600" fill="#BD9B5B">
+                                    <use xlink:href="imgs/svg/icon_environment_friendly.svg#Layer_1"></use>
+                                    <use xlink:href="imgs/svg/icon_environment_friendly.svg#Layer_1-2"></use>
+                                </svg>
+                            </div>
+                            <div class="ssi-title">
+                                <h3>Environmentally friendly</h3>
+                            </div>
+                            <div class="ssi-text">
+                                <p>Our clothes are made of organic or recycled garments from manufacturers that take full responsibility for
+									the environment. Fashion is the second largest polluter in the world, but we know it’s possible to make clean clothes!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+
+          <!-- Sustainable in every way ENDS -->
+
+          <!-- Part 5 - Material slider BEGINS -->
+          <div class="part5-wrapper section">
+            <h3>About the dark side of fashion.</h3>
+            <div class="circle-wrapper">
+              <div class="circle">
+                <div class="circleImg">
+                  <img src="imgs/icon_Circle.svg" alt="" width="100%" height="100%">
+                </div>
+                <div class="part5-top">
+					<div class="">
+						<svg class="circle-svg-icon svg-icon" width="80" height="80" viewbox="-100 0 500 500">
+							<use xlink:href="imgs/svg/icon_Raw_material.svg#Layer_1"></use>
+							<use xlink:href="imgs/svg/icon_Raw_material.svg#Layer_1-2"></use>
+						</svg>
+					</div>                </div>
+                <div class="part5-bottom">
+                  <div class="part5-left">
+					  <div class="">
+						  <svg class="circle-svg-icon svg-icon" width="60" height="60" viewbox="-50 -100 500 500">
+							  <use xlink:href="imgs/svg/icon_produktion.svg#Layer_1"></use>
+							  <use xlink:href="imgs/svg/icon_produktion.svg#Layer_1-2"></use>
+						  </svg>
+					  </div>
+             	</div>
+                  <div class="part5-right">
+					  <div class="">
+						  <svg class="circle-svg-icon svg-icon" width="65" height="65" viewbox="00 -100 500 500">
+							  <use xlink:href="imgs/svg/icon_waste.svg#Layer_1"></use>
+							  <use xlink:href="imgs/svg/icon_waste.svg#Layer_1-2"></use>
+						  </svg>
+					  </div>
+	            </div>
+                </div>
+              </div>
+            </div>
+            <div class="circle-slide-container slideContainer" id="circle-slide-container">
+                <div class="part5-textBox slide-div">
+                    <h4 class="part5">Raw materials</h4>
+                    <p class="part5">A single conventional cotton t-shirt contains a footprint of one kilogram potentially harmful chemicals, pesticides and fertilizers. About a quarter of the pesticides on earth are released over cotton crops.</p>
+                </div>
+                <div class="part5-textBox slide-div">
+                    <h4 class="part5">Production</h4>
+                    <p class="part5">In the fashion industry, millions of workers are forced to work under slave labour conditions for minimal wages,  and countless animals are being killed or mistreated, in order to bring down the prices so we can buy as much clothes as possible as often as possible.</p>
+                    </div>
+                <div class="part5-textBox slide-div">
+                    <h4 class="part5">Waste</h4>
+                    <p class="part5">Every year millions of garments are discarded as consumers ditch fast-fashion styles for a new wardrobe.
+                    <br><br>
+                    It is estimated that more than 1 million tonnes of textiles are thrown away every year.</p>
+                </div>
+              </div>
+          </div>
+          <!-- Part 5 - Material slider ENDS -->
+
+          <!-- Part 6 - Img Carousel BEGINS -->
+
+		  <div class="carousel-slide-wrapper" id="carousel-slide">
+			  <div class="carousel-header">
+			  	<h3 class="hTextPart6">proof that we don’t<br>
+					 	compromise with style.</h3>
+			  </div>
+			  <div class="carousel-slide-container slideContainer">
+				  <div class="carousel-slide-item slide-div first "></div>
+				  <div class="carousel-slide-item slide-div sec next"> </div>
+				  <div class="carousel-slide-item slide-div third "></div>
+				  <div class="carousel-slide-item slide-div fourth"></div>
+				  <div class="carousel-slide-item slide-div fifth "></div>
+				  <span class="sustain-angle left circle-angle circle-left slide-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+				  <span class="sustain-angle right circle-angle circle-right slide-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+			  </div>
+			  <div class="carousel-bottom-header">
+				  <h3 class=hTextPart6>
+					  #FUCKFASTFASHION
+				  </h3>
+			  </div>
+		  </div>
+
+          <!-- Part 6 - Img Carousel  ENDS -->
+
+        </div> <!--End main -->
+      </div> <!--End container -->
+      <!-- Footer begins -->
+      <footer class="site-footer section">
+          <div class="footer-wrapper footer-item">
+              <img class="footer-img footer-item" src="imgs/background-imgs/footerbg-1x.jpg" alt="">
+              <div class="footer-content footer-item">
+                  <div class="logo footer-info">
+                      <img class="logoImgFooter" src="imgs/logoSymbolWhite.png" alt="Thrive logo" width="25%" height="auto">
+                  </div>
+                  <div class="clearfix">
+                      <div class="share footer-info socials">
+                          <ul>
+                              <h1>Spread the word.</h1>
+                              <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                              <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                              <li><i class="fa fa-google-plus" aria-hidden="true"></i></i></li>
+                              <li><i class="fa fa-pinterest" aria-hidden="true"></i></li>
+                          </ul>
+                      </div>
+                      <div class="learn-more footer-info socials">
+                          <ul>
+                              <h1>Get to know us.</h1>
+                              <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                              <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="store-link footer-info">
+                      <a href="https://thrivestore.se" target="_blank"><button type="button" class="store-btn" name="button">Go to our store
+                          <i class="fa fa-angle-right btn-arrow" aria-hidden="true"></i>
+                      </button></a>
+                  </div>
+              </div>
+          </div>
+          <div class="hide footer-item"></div>
+      </footer>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyDnizYmiTm6k-59l4vrSd0oNU5mt9VXWsc"
+      type="text/javascript"></script>
+	  <script src="js/master.js" charset="utf-8"></script>
+  </body>
+</html>
