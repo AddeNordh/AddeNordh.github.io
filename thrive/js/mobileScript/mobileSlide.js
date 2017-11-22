@@ -70,7 +70,7 @@ const SwipeSlide = (event, slideItem, startNode, slideIcons, slideIndex, key, an
 	let slideHasIcons = (slideIcons && slideIndex) ? true : false;
 	let storyHeader = slideItem[0].parentNode.parentNode.querySelector("#story-header");
 	// User swipes the image to the right.
-	if (touches.pageX > startNode && slideIndex[key] != 0 || !startNode) {
+	if (touches.pageX > (startNode + 100)  && slideIndex[key] != 0 || !startNode) {
 		// Sets "slide" to "true" to make the if statment above return true
 		slide = true;
 		/**
@@ -94,7 +94,7 @@ const SwipeSlide = (event, slideItem, startNode, slideIcons, slideIndex, key, an
 		return false;
 	}
 	// User swipes the image to the left.
-	else if (touches.pageX < startNode && slideIndex[key] != slideItem.length - 1) {
+	else if (touches.pageX < (startNode - 100) && slideIndex[key] != slideItem.length - 1) {
 		slide = true;
 		slideItem[slideIndex[key]].style.left = "-" + animateWidth + "%";
 		if (slideHasIcons) slideIcons[slideIndex[key]].style.transform = "scale(1)";
