@@ -1,0 +1,360 @@
+@media screen and (min-width: 768px) {
+
+	img.logoText {
+		width: 20%;
+	}
+
+	a.logoButton {
+		padding-top: 3%;
+		padding-bottom: 2%;
+	}
+
+	button.hamburger {
+		padding-top: 1%;
+	}
+
+	.slide-img {
+		width: 35%;
+	}
+
+	div.part1 {
+		background-image: url("../imgs/background-imgs/headerbg-2x.jpg");
+	}
+
+	.slider-container {
+		height: 400px;
+	}
+
+	.slider-container .slide-item:first-child .slide-img {
+		content: url("../imgs/background-imgs/hannah-4x.jpg");
+	}
+
+	.slider-container .slide-item .jacket img {
+		width: 60%;
+		height: 50%;
+		transform:translateX(30%) translateY(-50%) ;
+	}
+
+	img.imgPart3 {
+		width: 380px;
+		content: url("../imgs/background-imgs/thrive-exclusive-2x.jpg");
+	}
+
+	div.part3-wrapper {
+		padding-left: 30px;
+		padding-right: 10px;
+	}
+
+	h3.hTextPart3 {
+		position: relative;
+		top: 90px;
+		z-index: 100;
+	}
+
+	div.part3-flex-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	div.part3-text-wrapper {
+		padding-left: 10px;
+		margin-top: 50px;
+	}
+
+	.sustain-slider-wrapper {
+		background-image: url("../imgs/background-imgs/leaves-4x.jpg");
+	}
+
+	div.sustain-options ul li{
+		margin: 25px;
+	}
+
+	.left, .right {
+		font-size: 70px;
+	}
+
+	div.ssi-text p {
+		width: 50%;
+		margin: 10px auto;
+	}
+
+	div.circle-wrapper .circle .part5-bottom {
+		width: 55%;
+	}
+
+	div.circle-slide-container {
+		height: 300px;
+	}
+
+	div.carousel-slide-wrapper {
+		height: 600px;
+		margin-top:0px;
+	}
+
+	.first {
+		background-image: url("../imgs/Bildspel/thrive-gallery-1-4x.jpg")!important;
+	}
+
+	.sec {
+		background-image: url("../imgs/Bildspel/thrive-gallery-2-2x.jpg")!important;
+	}
+	.third {
+		background-image: url("../imgs/Bildspel/thrive-gallery-3-2x.jpg")!important;
+	}
+	.fourth {
+		background-image: url("../imgs/Bildspel/thrive-gallery-4-2x.jpg")!important;
+	}
+	.fifth {
+		background-image: url("../imgs/Bildspel/thrive-gallery-5-2x.jpg")!important;
+	}
+
+	.site-footer {
+		margin-top:0;
+	    height: 85%;
+	}
+
+	.footer-item {
+	    width: 100%;
+		height: 100%;
+	}
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+	div.part1 {
+		height: 650px;
+	}
+
+	img.logoImg {
+		width: 120px;
+	}
+
+	.section:not(.site-footer) {
+		margin-top: 200px!important;
+	}
+
+
+	.arrow_left, .arrow_right {
+		display: inline-block;
+		position: relative;
+		z-index: 50;
+		top: 20px;
+	}
+
+	.arrow_left {
+		float: left;
+		left: 205px;
+	}
+
+	.stories-head {
+		margin: 0px 100px;
+	}
+
+	.arrow_right {
+		float: right;
+		right: 205px;
+	}
+
+	.stories-head h1 {
+		font-size: 30px!important;
+		position: relative;
+		margin-left:18%!important;
+		bottom: 70px;
+	}
+
+	.slider-container {
+		height: 650px;
+		background: url("../imgs/background-imgs/beach-4x.jpg");
+		background-size: cover;
+	}
+
+	#container {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+	}
+
+	.slide-item {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.slide-item .img-text {
+		width: 40%;
+		font-size: 22px;
+		line-height: 145%;
+	}
+
+	.slide-item.slide-person {
+		left: 100%;
+	}
+
+	.slide-item.slide-person.slide-img img {
+		content: url("../imgs/background-imgs/hannah-4x.jpg");
+
+	}
+
+	.slide.item.slide-jacket {
+		left: 100%;
+	}
+
+
+	h2.textPart1 {
+		font-size: 60px;
+		line-height: 70px;
+		margin-left: 300px;
+		font-weight: 600;
+	}
+
+	div.stories-slide-wrapper {
+		margin: 200px 0px 200px 0px;
+	}
+
+	button.hamburger {
+		font-size: 150%;
+		margin-left: 1%;
+		padding-top: .5%;
+	}
+
+	a.logoButton {
+		padding-top: 2%;
+		padding-bottom: 1%;
+	}
+
+	img.logoText {
+		width: 10%;
+	}
+
+	input.storeButton {
+		width: 186px;
+		margin: 0 763px 30px 763px;
+	}
+
+	div.part3-wrapper {
+		padding-left: 250px;
+		padding-right: 250px;
+	}
+
+	h3.hTextPart3 {
+		position: relative;
+		top: 130px;
+		z-index: 100;
+	}
+
+	div.part3-flex-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	img.imgPart3 {
+		width: 480px;
+		display: flex;
+	}
+
+	div.part3-text-wrapper {
+		padding-left: 70px;
+		margin-top: 100px;
+	}
+
+	/*Part 5 - Materials */
+
+	div.circle-wrapper {
+		margin: 8% 5% 0%;
+	}
+
+	div.circle {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		/*height: 10vh;*/
+		/*width: 75%;*/
+	}
+
+	div.circleImg {
+		display: none;
+	}
+
+	.circle-svg-icon {
+		transform: scale(2.5);
+	}
+
+	div.part5-wrapper {
+		margin-top: 200px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	div.part5-top {
+		display: flex;
+		margin-top: 80px;
+	}
+
+	div.part5-bottom {
+		flex-direction: row;
+	}
+
+	div.circle-slide-container {
+		overflow: auto;
+		height: 500px;
+		margin-bottom: 180px;
+		display: flex;
+		justify-content: center;
+	}
+
+	div.part5-textBox {
+		padding: 50px 24px;
+		position: relative;
+		left:0;
+		width: 385px;
+	}
+
+	div.part5-textBox:not(:first-child) {
+		left: 0%;
+	}
+
+	h4.part5 {
+		font-size: 27px;
+		padding-bottom: 40px;
+		font-weight: 600;
+	}
+
+	p.part5 {
+		line-height: 32px;
+		font-size: 22px;
+	}
+
+	.sustain-slider-wrapper .arrow * {
+		fill: #fff;
+	}
+
+	.sustain-slider-wrapper .arrow_right{
+		right: 400px;
+	}
+
+	.sustain-slider-wrapper .arrow_left{
+		left: 400px;
+	}
+
+	.sustain-slider-wrapper .arrow {
+		position: relative;
+		top: 25%;
+	}
+
+	div.ssi-text p {
+		width: 55%;
+	}
+
+	.site-footer {
+	    height: 70%;
+	}
+
+	.footer-item {
+	    width: 100%;
+		height: 100%;
+	}
+
+}
