@@ -47,9 +47,11 @@ window.onscroll=navScroll;
 
 function myFunction() {
 	var x = document.getElementById("sidebar");
-	if (!x.style.display || x.style.display === "none") {
-		x.style.display = "block";
+	if (!x.style.opacity || x.style.opacity === "0") {
+		x.style.opacity = ".85";
+		x.style.zIndex = "20";
 	} else {
-		x.style.display = "none";
+		x.style.opacity = "0";
+		x.style.zIndex = "-10";
 	}
 }

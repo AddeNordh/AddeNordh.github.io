@@ -318,3 +318,63 @@ for (arrow of slideArrows) {
 			ArrowSlide(items, dir, slideIndexes, key, icons);
 	});
 }
+
+
+
+// Refactored Code ENDS //
+
+
+// slideContainer.addEventListener("touchstart", (e) => {
+// 	startNode = e.touches[0].pageX;
+// 	if (slide) slide = false;
+// });
+//
+//
+//
+// const headSwipeSlide = (e) => {
+//     for (let i = 0; i < e.changedTouches.length; i++) {
+// 		if (slide) {
+// 			return false;
+// 		}
+//         // swipe to right
+// 		if (e.changedTouches[i].pageX > startNode && headeSlideIndex != 0) {
+// 			slide = true;
+//             imgs[headeSlideIndex].style.left = "100%";
+//             imgsOpt[headeSlideIndex].style.transform = "scale(1)";
+//             imgsOpt[headeSlideIndex].style.fill = "";
+//             headeSlideIndex--;
+//             imgs[headeSlideIndex].style.left = "0";
+//             imgsOpt[headeSlideIndex].style.transform = "scale(1.1)";
+//             imgsOpt[headeSlideIndex].style.fill = "#BD9B5B";
+// 			return false;
+// 		}
+//         //swipe to left
+// 		else if (e.changedTouches[i].pageX < startNode && headeSlideIndex != imgs.length - 1) {
+// 			slide = true;
+//             imgs[headeSlideIndex].style.left = "-100%";
+//             imgsOpt[headeSlideIndex].style.transform = "scale(1)";
+//             imgsOpt[headeSlideIndex].style.fill = "";
+//             headeSlideIndex++;
+//             if (headeSlideIndex == imgs.length - 1 && !map) {
+//                 initMap();
+//             }
+//             imgs[headeSlideIndex].style.left = "0";
+//             imgsOpt[headeSlideIndex].style.transform = "scale(1.3)";
+//             imgsOpt[headeSlideIndex].style.fill = "#BD9B5B";
+// 			return false;
+// 		}
+//     }
+// }
+//
+// slideContainer.addEventListener("touchmove",headSwipeSlide);
+// HEADER SWIPE SLIDE ENDS //
+
+
+// CRICLE SWIPE SLIDE STARTS //
+// let circleSlideStartNode;
+// let circleSlideIndex = 0;
+// const circleSlideItems = document.getElementsByClassName('part5-textBox');
+// const CircleSlideContainer = document.getElementById('circle-slide-container');
+// const CircleSlideOpts = document.getElementsByClassName('slider-opt')
+
+// CRICLE SWIPE SLIDE ENDS //

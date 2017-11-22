@@ -87,7 +87,7 @@ for (container of containers) {
 
 const clickSlide = (slideItems, icons, index, key, clickIndex) => {
 	let storyHeader = document.getElementById("story-header");
-
+	console.log(2);
 	// if the clicked index is higher than the current index of the slide, switch to next slide
 	if (clickIndex > index[key] && clickIndex < slideItems.length) {
 		// loop through all slides until it reaches the clicked index
@@ -136,19 +136,19 @@ const clickSlide = (slideItems, icons, index, key, clickIndex) => {
 
 for (container of containers) {
 	if (container.classList.contains('circle-slide-container') | container.classList.contains('carousel-slide-container')) {
+		break;
 	}
 	else {
 		let icons = container.parentNode.querySelectorAll('.svg-icon');
 		let slideItems = container.parentNode.querySelectorAll('.slide-div');
 		let key = slideItems[0].classList[0];
-		for (let i = 0; i < icons.length - 1; i++) {
+		for (let i = 0; i < icons.length; i++) {
 			let clickIndex = i;
 			let icon = icons[i];
 			icon.addEventListener("click", () => {
-				clickSlide(slideItems, icons, slideIndexes)
+				clickSlide(slideItems, icons, slideIndexes, key, i);
 			});
 		}
-
 	}
 }
 

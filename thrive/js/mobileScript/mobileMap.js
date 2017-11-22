@@ -11,15 +11,17 @@ let count;
 let map;
 let markerToggled = true;
 
-const markerInfo = ["boots_1", "boots_2", "boots_3", "boots_4" ];
+const markerInfo = [
+	"The hemp was hand harvested and processed in Cazères, France.",
+ 	"The organic cotton was hand harvested and processed in Istanbul, Turkey",
+	"The parka was sewn and finished in Beijing, China." ];
 const markers = [];
 const markerCord =
 {
 		jacket : [
-        { lat: 43.717425, lng: -5.015271 },
-		{ lat: 60.717425, lng: 13.015271 },
-		{ lat: 35.717425, lng: 85.015271 },
-		{ lat: 25.058686, lng: -5.805401 }
+        { lat: 43.204781, lng: 1.085473 },
+		{ lat: 41.005077, lng: 28.969398 },
+		{ lat: 39.877838, lng: 116.385438 }
     ]
 }
 
@@ -140,11 +142,11 @@ function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), options); // creates the map with all the styling (options)
 
 
-    dropMarkers(markerCord.jacket, count, markerInfo);
+		dropMarkers(markerCord.jacket, count, markerInfo);
 
     function dropMarkers(cordArray, count, inforArray){
     	for (let i = 0; i < cordArray.length; i++) {
-    		addMarkers(cordArray[i], i * 300, i ,inforArray)
+    		addMarkers(cordArray[i], (i + 1) * 400, i ,inforArray)
     	}
     	setTimeout(function(){
     		drawLine(cordArray[0], cordArray[1], true, 1, 2, cordArray, 0)
@@ -159,10 +161,10 @@ function initMap() {
     function addMarkers(position, time, i, inforArray) {
     	window.setTimeout(function() {
     		marker = new google.maps.Marker({
-    			position: position,
-    			map: map,
-    			animation:google.maps.Animation.DROP,
-				icon: icon
+    			position,
+    			map,
+				icon,
+				animation:google.maps.Animation.DROP
     		});
     		markers.push(marker);
     		info(marker, inforArray, i, markerToggled);
@@ -176,10 +178,10 @@ function initMap() {
 			setTimeout(() => {
 				infoWindow = new google.maps.InfoWindow({
 					content:"<p style='color:#000;'>" + inforArray[i] + "</p>",
-					maxWidth: 1000,
+					maxWidth: 250,
 				});
 				infoWindow.open(map, marker);
-			},1000);
+			},1500);
 		}
     	marker.addListener("click", function(){
     		if (infoWindow)
@@ -188,7 +190,7 @@ function initMap() {
     		}
     		infoWindow = new google.maps.InfoWindow({
     			content:"<p style='color:#000;'>" + inforArray[i] + "</p>",
-    			maxWidth: 1000,
+    			maxWidth: 250,
     		});
     		infoWindow.open(map, marker);
     	});
@@ -208,7 +210,7 @@ function initMap() {
     			strokeOpacity: 1,
     			strokeWeight: 3,
     			geodesic: true,
-    			map: map,
+    			map: map
     		});
     		lines.push(line);
     		let interval = setInterval(function() {
