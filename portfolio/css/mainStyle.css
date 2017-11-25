@@ -3,7 +3,7 @@ html {
     margin: 0;
     height: 100%;
     padding: 0;
-    background: #1a8fff;
+    background: #1a6fff;
 }
 
 * {
@@ -24,7 +24,6 @@ ul {
     position: relative;
     width: 100%;
     height: 20%;
-    background: #1a8fff;
     border-bottom: 4px solid #f49501;
 
 }
