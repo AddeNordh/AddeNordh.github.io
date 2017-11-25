@@ -3,8 +3,7 @@ html {
     margin: 0;
     height: 100%;
     padding: 0;
-    background: #1a5fff;
-	background: #1f1f1f;
+	background: #2a2a2a;
 }
 
 * {
@@ -20,26 +19,8 @@ ul {
     list-style-type:none;
 }
 
-.menu-logo {
-	transition: all .5s ease;
-	position: absolute;
-	top: 2%;
-	cursor: pointer;
-	z-index: 100;
-	right: -10%;
-}
-
-
-
-.nav-bar {
-	transition: all .25s ease;
-	width: 50px;
-	background: #def;
-	border-radius: 50%;
-	height: 5px;
-	position: relative;
-	margin: 10px;
-	top: 0px;
+a {
+	text-decoration: none;
 }
 
 .nav {
@@ -74,6 +55,7 @@ ul {
 
 .nav li.nav-item:hover {
 	padding-left: calc(50% - 65px);
+	color: #F49501;
 }
 .nav li.nav-item:nth-child(even):hover {
 	box-shadow: inset -20px 0px 0px 0px #def;
@@ -107,6 +89,27 @@ ul {
 	transform:rotate(-45deg);
 }*/
 
+
+.menu-logo {
+	transition: all .5s ease;
+	position: absolute;
+	top: 2%;
+	cursor: pointer;
+	z-index: 100;
+	right: -10%;
+}
+
+.nav-bar {
+	transition: all .25s ease;
+	width: 50px;
+	background: #def;
+	border-radius: 50%;
+	height: 5px;
+	position: relative;
+	margin: 10px;
+	top: 0px;
+}
+
 .menu-logo.nav-toggled .nav-bar.middle {
 	top: 18px;
 	opacity: 0;
@@ -121,11 +124,16 @@ ul {
 	transform:rotate(225deg);
 }
 
-.menu-logo:not(.nav-toggled):hover .nav-bar {
-	margin: 13px 10px;
+.menu-logo:not(.nav-toggled):hover .nav-bar.top {
+	top: -5px;
+}
+
+.menu-logo:not(.nav-toggled):hover .nav-bar.bottom {
+	top: 5px;
 }
 
 main.main-content {
+	position: relative;
     display: flex;
     position: relative;
     align-items: center;
@@ -133,6 +141,24 @@ main.main-content {
 	justify-content: center;
     width: 100%;
     height: 100%;
+	background: #2f2f2f;
+}
+
+div.home-msg {
+	min-height: 200px;
+}
+
+@keyframes blink {50% { color: transparent }}
+.__dot { animation: 1s blink infinite }
+
+div.home-msg a, div.home-msg b {
+	color: #F49501;
+}
+
+div.home-btn button {
+	outline: none;
+	border: 2px solid #F49501;
+	background: transparent;
 }
 
 main.main-content div {
