@@ -25,7 +25,7 @@ const addClass = (elementsArray, delay, element, classToAdd) => {
 
 
 
-const greetmsg = "Hello, my name is <b>Andreas Nordh</b> I am a soon to be fullstack developer.<br> Currentely a freshman year studen at <b> YRGO Gothenburg Sweden. </b><br> Feel free to take a look at my <b><a href='https://github.com/addenordh' target='_blank'> Github.</a></b> <br>Also you can take a contact me via <b>Nordh.Andreas@hotmail.com</b>.";
+const greetmsg = "Hello, my name is <b>Andreas Nordh</b> I am a soon to be fullstack developer.<br> Currentely a freshman year studen at <b> YRGO Gothenburg Sweden. </b><br> Feel free to take a look at my <b><a href='https://github.com/addenordh' target='_blank'> Github.</a></b> <br>Also you can take a contact me via <b>Nordh.Andreas@hotmail.com</b><span class='__dot'>.</span>";
 let number = 0;
 const field = document.getElementById("greet-msg");
 
