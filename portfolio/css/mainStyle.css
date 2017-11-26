@@ -12,23 +12,6 @@ main.main-content {
 	background: #2f2f2f;
 }
 
-div.home-msg {
-	min-height: 200px;
-}
-
-@keyframes blink {50% { color: transparent }}
-.__dot { animation: 1s blink infinite }
-
-div.home-msg a, div.home-msg b {
-	color: #F49501;
-}
-
-div.home-btn button {
-	outline: none;
-	border: 2px solid #F49501;
-	background: transparent;
-}
-
 main.main-content div {
     transition: all .5s ease;
     opacity: 0;
@@ -38,10 +21,8 @@ main.main-content div {
 	font-size: 18px;
 }
 
-
-.slideUpp-FadeIn {
-    opacity: 1!important;
-    transform: translateY(0)!important;
+div.home-msg {
+	min-height: 200px;
 }
 
 main.main-content p {
@@ -52,6 +33,47 @@ main.main-content p {
 	text-align: left;
 }
 
+@keyframes blink {50% { color: transparent }}
+.__dot { animation: 1s blink infinite }
+
+div.home-msg a, div.home-msg b {
+	color: #F49501;
+	cursor: pointer;
+	transition: all .25s ease;
+}
+
+div.home-msg a:hover, div.home-msg b:hover {
+	color: #def;
+}
+
+
+div.home-btn button {
+	transition: all .3s ease;
+	cursor: pointer;
+	outline: none;
+	border: 2px solid #F49501;
+	background: transparent;
+	width: 250px;
+	text-transform: capitalize;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	height: 50px;
+	position: relative;
+	top: 0;
+}
+
+div.home-btn button:hover {
+	top: -10px;
+	border: 2px solid #def;
+	color: #F49501;
+}
+
 .slideIn-f-rigth-fadeIn-2 {
 	right: 2%;
+}
+
+.slideUpp-FadeIn {
+    opacity: 1!important;
+    transform: translateY(0)!important;
 }
