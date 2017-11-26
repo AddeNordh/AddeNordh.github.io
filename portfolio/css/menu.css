@@ -1,0 +1,159 @@
+.menu-logo {
+	transition: all .5s ease;
+	position: absolute;
+	top: 2%;
+	cursor: pointer;
+	z-index: 100;
+	right: -10%;
+}
+
+.nav-bar {
+	transition: all .25s ease;
+	width: 50px;
+	background: #def;
+	border-radius: 50%;
+	height: 5px;
+	position: relative;
+	margin: 10px;
+	top: 0px;
+}
+
+.nav {
+	transition: all .5s ease;
+	background: rgb(47, 47, 47);
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+	top: -100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav ul {
+	width: 50%;
+}
+
+.nav li.nav-item {
+	transition: all .35s ease;
+	font-size: 35px;
+    text-transform: capitalize;
+    margin: 35px;
+    letter-spacing: 2px;
+    background: rgba(51, 51, 51, 0.6);
+    border-radius: 5px;
+    padding: 20px;
+	left: 0;
+	position: relative;
+	cursor: pointer;
+	padding-left: calc(50% - 80px);
+}
+
+
+.nav li.nav-item::before,
+.nav li.nav-item::after {
+	display: block;
+	content: "";
+	position: absolute;
+	height: 50%;
+	width: 0px;
+	transition: all .4s ease;
+	z-index: -1;
+}
+
+.nav li.nav-item::before {
+	top: 0;
+	left: 0;
+	background: rgba(60,60,60,0.8);
+}
+
+.nav li.nav-item::after {
+	bottom: 0;
+	left: calc(100% - 20px);
+	background: rgba(60,60,60,0.8);
+}
+
+
+.nav.active {
+	opacity: .99;
+	visibility: visible;
+	top: 0;
+}
+
+/*.menu-logo.nav-toggled .nav-bar.top {
+	top: 18px;
+	opacity: 0;
+}
+
+.menu-logo.nav-toggled .nav-bar.middle {
+	transform:rotate(45deg);
+}
+
+.menu-logo.nav-toggled .nav-bar.bottom {
+	top: -15px;
+	transform:rotate(-45deg);
+}*/
+
+
+/* MENU LOGO EFFECTS */
+
+.menu-logo.nav-toggled .nav-bar.middle {
+	top: 18px;
+	opacity: 0;
+}
+
+.menu-logo.nav-toggled .nav-bar.top {
+	transform:rotate(-225deg);
+	top: 30px;
+}
+
+.menu-logo.nav-toggled .nav-bar.bottom {
+	transform:rotate(225deg);
+}
+
+.menu-logo:not(.nav-toggled):hover .nav-bar.top {
+	top: -5px;
+}
+
+.menu-logo:not(.nav-toggled):hover .nav-bar.bottom {
+	top: 5px;
+}
+
+/* MENY ITEMS HOVER BEGINS */
+
+.nav li.nav-item:hover {
+	color: #F49501;
+}
+.nav li.nav-item:nth-child(even):hover {
+	padding-left: 20%;
+	box-shadow: inset -20px 0px 0px 0px #def;
+}
+
+.nav li.nav-item:nth-child(odd):hover {
+	padding-left: calc(70% - 80px);
+	box-shadow: inset 20px 0px 0px 0px #def;
+}
+
+.nav li.nav-item:nth-child(odd):hover:before {
+	left: 20px;
+	width: calc(100% - 20px);
+}
+
+.nav li.nav-item:hover:nth-child(odd):after {
+	left: 20px;
+	width: calc(100% - 20px);
+}
+
+.nav li.nav-item:nth-child(even):hover:before {
+	left: 0px;
+	width: calc(100% - 20px);
+}
+
+.nav li.nav-item:hover:nth-child(even):after {
+	left: 0px;
+	width: calc(100% - 20px);
+}
