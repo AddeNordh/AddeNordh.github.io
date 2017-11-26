@@ -134,6 +134,7 @@
 .nav li.nav-item:hover {
 	color: #F49501;
 }
+
 .nav li.nav-item:nth-child(even):hover {
 	padding-left: 20%;
 	box-shadow: inset -20px 0px 0px 0px #def;
@@ -145,21 +146,29 @@
 }
 
 .nav li.nav-item:nth-child(odd):hover:before {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	left: 20px;
 	width: calc(100% - 20px);
 }
 
 .nav li.nav-item:hover:nth-child(odd):after {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	left: 20px;
 	width: calc(100% - 20px);
 }
 
 .nav li.nav-item:nth-child(even):hover:before {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 	left: 0px;
 	width: calc(100% - 20px);
 }
 
 .nav li.nav-item:hover:nth-child(even):after {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 	left: 0px;
 	width: calc(100% - 20px);
 }
