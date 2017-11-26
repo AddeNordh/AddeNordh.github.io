@@ -48,9 +48,15 @@
     border-radius: 5px;
     padding: 20px;
 	left: 0;
+	top: 100%;
 	position: relative;
 	cursor: pointer;
 	padding-left: calc(50% - 80px);
+	transform:translateY(-200%);
+}
+
+.nav li.nav-item.li-active {
+	transform:translateY(0%);
 }
 
 
