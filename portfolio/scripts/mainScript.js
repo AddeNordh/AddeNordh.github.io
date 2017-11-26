@@ -58,12 +58,6 @@ const typeWord = (word, delay) => {
 	}
 }
 
-setTimeout(() => {
-	typeWord(greetmsg,15);
-},400);
-
-
-
 
 const menuIcon = document.getElementById('nav-icon');
 const nav = document.getElementById('nav');
@@ -82,5 +76,8 @@ menuIcon.addEventListener("click", () => {
 	}
 });
 
-addClass(homeContentItems, 200, null, "slideUpp-FadeIn");
+addClass(homeContentItems, 300, null, "slideUpp-FadeIn");
 addClass(null, 300, menuIcon, "slideIn-f-rigth-fadeIn-2");
+setTimeout(() => {
+	typeWord(greetmsg,15);
+},1100);
