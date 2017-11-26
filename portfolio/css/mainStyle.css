@@ -69,6 +69,61 @@ div.home-btn button:hover {
 	color: #F49501;
 }
 
+div.next_arrow {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	right: 2%;
+	top: calc(50% - 50px);
+	cursor: pointer;
+}
+
+div.line {
+	transition: all .5s ease;
+	height: 0%;
+	width: 2px;
+	background: #def;
+	position: relative;
+	left: 23px;
+	transform: rotate(0deg);
+}
+
+div.next_arrow p.next-txt {
+	transition: all .5s ease;
+	position: absolute;
+	transform: translateY(-100%);
+	font-size: 12px;
+	opacity: 0;
+	right: 2%;
+}
+
+div.line.active {
+	height: 50%;
+}
+
+div.line.top.active {
+	transform: rotate(-225deg);
+	top: 7px;
+}
+
+div.next_arrow:hover p.next-txt {
+	opacity: 0.7;
+	right: 100%;
+}
+
+div.next_arrow:hover div.line.top {
+	top: 14px;
+	transform: rotate(-245deg);
+}
+
+div.next_arrow:hover div.line.bottom {
+	transform: rotate(245deg);
+}
+
+div.line.bottom.active {
+	transform: rotate(225deg);
+}
+
 .slideIn-f-rigth-fadeIn-2 {
 	right: 2%;
 }

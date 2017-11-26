@@ -44,7 +44,7 @@ const removeClass = (elementsArray, element, delay, classToRemove) => {
 
 
 
-const greetmsg = "Hello, I'm <b>Andreas Nordh</b> and I am a soon to be fullstack developer.<br> Currently a freshman year studen at <b> YRGO Gothenburg Sweden. </b><br> Feel free to take a look at my <b><a href='https://github.com/addenordh' target='_blank'> Github</a></b> to view some of my work <br>Also you can take a contact me via <b>Nordh.Andreas@hotmail.com</b><span class='__dot'>.</span>";
+const greetmsg = "Hello, I'm <b>Andreas Nordh</b> and I am a soon to be fullstack developer.<br> Currently a freshman year student at <b> YRGO Gothenburg Sweden. </b><br> Feel free to take a look at my <b><a href='https://github.com/addenordh' target='_blank'> Github</a></b> to view some of my work <br>Also you can take a contact me via <b>Nordh.Andreas@hotmail.com</b><span class='__dot'>.</span>";
 let number = 0;
 const field = document.getElementById("greet-msg");
 
@@ -76,6 +76,10 @@ menuIcon.addEventListener("click", () => {
 	}
 });
 
+const arrowLines = document.getElementsByClassName('line');
+setTimeout(() => {
+	addClass(arrowLines, 200, null, "active");
+},1000);
 addClass(homeContentItems, 300, null, "slideUpp-FadeIn");
 addClass(null, 300, menuIcon, "slideIn-f-rigth-fadeIn-2");
 setTimeout(() => {
