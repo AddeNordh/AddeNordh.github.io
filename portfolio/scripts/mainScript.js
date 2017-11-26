@@ -12,10 +12,21 @@ const field = document.getElementById("greet-msg");
 const menuIcon = document.getElementById('nav-icon');
 const nav = document.getElementById('nav');
 const navItems = nav.getElementsByClassName('nav-item');
+const workItems = document.getElementsByClassName('work-item');
+
+for (let workItem of workItems) {
+	workItem.addEventListener("mouseover", () => {
+		let img = workItem.querySelector("img");
+		let src = img.src;
+		let itemInfo = workItem.querySelector(".work-item-info");
+		itemInfo.style.background = "url(" + src + ")";
+		itemInfo.style.backgroundSize = "cover";
+	});
+}
 
 
 
-const addClass = (elementsArray, delay, element, classToAdd) => {
+const addClass = (elementsArray, delay, element, classToAdd, mult) => {
     if (elementsArray) {
         for (var i = 0; i < elementsArray.length; i++) {
         ((i) => {
@@ -34,7 +45,7 @@ const addClass = (elementsArray, delay, element, classToAdd) => {
     }
 }
 
-const removeClass = (elementsArray, element, delay, classToRemove) => {
+const removeClass = (elementsArray, element, delay, classToRemove, mult) => {
     if (elementsArray) {
         for (var i = 0; i < elementsArray.length; i++) {
         ((i) => {
@@ -85,7 +96,7 @@ setTimeout(() => {
 const getContent = (section) => {
 	let sectionContent = [];
 	let contentClasses = [];
-	let sectionItems = section.querySelectorAll("* div");
+	let sectionItems = section.querySelectorAll("div");
 	for (let item of sectionItems) {
 		let classes = Array.from(item.classList);
 		classes.forEach((c) => {
@@ -102,16 +113,13 @@ const getContent = (section) => {
 	}
 }
 
-
-next.addEventListener("click", () => {
+const removeContent = (obj) => {
 	let item = null;
 	let Class = null;
 	let cta = null;
-	let section = pages[pageIndex];
-	let content = getContent(section);
-	for (let i = 0; i < content.items.length; i++) {
-		item = content.items[i];
-		Class = content.classes[i];
+	for (let i = 0; i < obj.items.length; i++) {
+		item = obj.items[i];
+		Class = obj.classes[i];
 		cta = null;
 		if (Class === "su-fi") {
 			cta = "slideUpp-FadeIn";
@@ -119,9 +127,35 @@ next.addEventListener("click", () => {
 		if (Class === "si-f-r") {
 			cta = "slideIn-f-right"
 		}
-		console.log(item, Class);
 		removeClass(null, item, 200, cta);
 	}
+}
+
+const addContent = (obj, delay) => {
+	let item = null;
+	let Class = null;
+	let cta = null;
+	let count = 1;
+	for (let i = 0; i < obj.items.length; i++) {
+		item = obj.items[i];
+		Class = obj.classes[i];
+		cta = null;
+		if (Class === "su-fi") {
+			cta = "slideUpp-FadeIn";
+		}
+		if (Class === "si-f-r") {
+			cta = "slideIn-f-right"
+		}
+		addClass(null, delay * (count + 1), item, cta, count);
+		count++;
+	}
+}
+
+
+next.addEventListener("click", () => {
+	let section = pages[pageIndex];
+	let content = getContent(section);
+	removeContent(content);
 
 	removeClass(null, section, 700, "active");
 	addClass(null, 700, section, "prev");
@@ -130,9 +164,9 @@ next.addEventListener("click", () => {
 	addClass(null, 700, nextSection, "active");
 
 	let nextContent = getContent(nextSection);
-
-
-
+	setTimeout(() => {
+		addContent(nextContent, 400);
+	}, 1300)
 });
 
 
