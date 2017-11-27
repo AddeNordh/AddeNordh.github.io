@@ -11,7 +11,6 @@ function page(page, index) {
 page.prototype.switch = function (current, desired) {
 	this.current = current;
 	this.desired = desired;
-	console.log(this.current.childrenDiv, this.desired.childrenDiv);
 };
 
 
@@ -21,7 +20,7 @@ page.prototype.addContent = function (page, cta, dir) {
 		addClass(navBars, 100, null, cta);
 		addClass(rightArrow, 100, null, cta);
 	},500);
-	if (page.index === 0 && dir === "right" || page.index === 1 && dir === "left" || init) {
+	if (page.index === 1 && dir === "left" || init) {
 		init = false;
 		addClass(homeContentItems, 300, null, cta);
 		addClass(fields, 150, null, cta);
@@ -31,7 +30,6 @@ page.prototype.addContent = function (page, cta, dir) {
 
 page.prototype.clearContent = function (page, ctr) {
 	this.page = page;
-	console.log(this.page);
 	setTimeout(() => {
 		removeClass(this.page.childrenDiv, null, 100, ctr, 1.1);
 		removeClass(this.page.menuBars, null, 100, ctr, 1.5);
