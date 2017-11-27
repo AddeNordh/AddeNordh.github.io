@@ -4,7 +4,7 @@
 	top: 2%;
 	cursor: pointer;
 	z-index: 100;
-	right: -10%;
+	right: 0%;
 }
 
 .nav-bar {
@@ -16,6 +16,11 @@
 	position: relative;
 	margin: 10px;
 	top: 0px;
+	right: -100%;
+}
+
+.nav-bar.active {
+	right: 0;
 }
 
 .nav {
@@ -67,17 +72,18 @@
 	position: absolute;
 	height: 50%;
 	width: 0px;
-	transition: all .4s ease;
 	z-index: -1;
 }
 
 .nav li.nav-item::before {
+	transition: all .55s ease;
 	top: 0;
 	left: 0;
 	background: rgba(60,60,60,0.8);
 }
 
 .nav li.nav-item::after {
+	transition: all .4s ease;
 	bottom: 0;
 	left: calc(100% - 20px);
 	background: rgba(60,60,60,0.8);
