@@ -1,4 +1,4 @@
-function page(page, index) {
+function section(page, index) {
 	this.page = page;
 	this.index = index;
 	this.menuBars = document.querySelectorAll(".nav-bar");
@@ -8,18 +8,28 @@ function page(page, index) {
 }
 
 
-page.prototype.switch = function (current, desired) {
-	this.current = current;
-	this.desired = desired;
-};
-
-
-page.prototype.addContent = function (page, cta, dir) {
-	this.page = page;
+section.prototype.switch = function(current, desired, cctr, ccta, dctr, dcta) {
+	this.current = current.page;
+	this.desired = desired.page;
+	addClass(null, 2000, this.current, ccta);
+	removeClass(null, this.current, 2000, cctr);
+	addClass(null, 2000, this.desired, dcta);
+	removeClass(null, this.current, 2000, dctr);
 	setTimeout(() => {
-		addClass(navBars, 100, null, cta);
-		addClass(rightArrow, 100, null, cta);
-	},500);
+		this.addContent(desired, "active");
+	}, 2500);
+}
+
+
+section.prototype.addContent = function (page, cta, dir, done) {
+		setTimeout(() => {
+			addClass(navBars, 100, null, cta);
+			addClass(rightArrow, 100, null, cta);
+			if (page.index > 0) {
+				addClass(leftArrow, 100, null, cta);
+			}
+		},1000);
+
 	if (page.index === 1 && dir === "left" || init) {
 		init = false;
 		addClass(homeContentItems, 300, null, cta);
@@ -28,12 +38,13 @@ page.prototype.addContent = function (page, cta, dir) {
 };
 
 
-page.prototype.clearContent = function (page, ctr) {
-	this.page = page;
+section.prototype.clearContent = function (page, ctr) {
 	setTimeout(() => {
-		removeClass(this.page.childrenDiv, null, 100, ctr, 1.1);
-		removeClass(this.page.menuBars, null, 100, ctr, 1.5);
-		removeClass(this.page.arrows, null, 100, ctr, 1.2);
+		removeClass(page.childrenDiv, null, 100, ctr, 1.1);
+		removeClass(page.menuBars, null, 100, ctr, 1.5);
+		removeClass(page.arrows, null, 100, ctr, 1.2);
+		addClass(null, 550, loader, "active");
+		removeClass(null, loader, 1700, "active");
 	},250);
-	removeClass(this.page.childrenP, null, 100, ctr, 1.5);
+	removeClass(page.childrenP, null, 100, ctr, 1.5);
 };
