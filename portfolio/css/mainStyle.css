@@ -50,7 +50,7 @@ div.home-msg {
 
 main.main-content p {
 	transition: all .5s ease;
-	transform:translateY(100%);
+	transform:translateY(150%);
 	opacity: 0;
 	min-width: 600px;
 	font-size: 18px;
