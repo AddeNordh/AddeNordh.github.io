@@ -19,10 +19,10 @@ let init = true;
 next.addEventListener("click", () => {
 	let current = pages[pageIndex];
 	let next = pages[pageIndex + 1];
-	if (pageIndex === 0) {
-		current.clearContent(current, "active");
-	}
-
+	current.clearContent(current, "active");
+	setTimeout(() => {
+		next.addContent(next, "active");
+	},1000)
 	pages[pageIndex].switch(current, next);
 	pageIndex++;
 });
