@@ -1,4 +1,27 @@
 
+.loader {
+    border: 16px solid #1f1f1f;
+	transition: all .5s ease;
+    border-top: 16px solid #F49501;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+	position: absolute;
+	opacity: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);
+	 }
+}
+
+.loader.active {
+	animation: spin 1.3s ease;
+	opacity: 1;
+}
+
+
 main.main-content:not(.active) {
 	left: 100%;
 	transform: perspective(1000px) rotateY(180deg);
@@ -200,14 +223,24 @@ div.work-item img {
 	background-size: cover;
 }
 
-div.next_arrow {
+div.next_arrow, div.prev_arrow {
 	position: absolute;
 	width: 50px;
 	height: 50px;
-	right: 0%;
 	top: calc(50% - 50px);
 	cursor: pointer;
 }
+
+
+
+div.next_arrow {
+	right: 0%;
+}
+
+div.prev_arrow {
+	left: 2%;
+}
+
 
 div.line {
 	transition: all .5s ease;
@@ -218,21 +251,37 @@ div.line {
 	transform: rotate(0deg);
 }
 
-div.next_arrow p.next-txt {
+div.next_arrow p.next-txt, div.prev_arrow p.next-txt {
 	transition: all .5s ease;
 	position: absolute;
 	transform: translateY(-90%);
 	font-size: 12px;
 	opacity: 0;
+}
+
+div.prev_arrow p.next-txt  {
+	left: 3%;
+}
+
+div.next_arrow p.next-txt {
 	right: 3%;
+}
+
+div.left-line.top.active {
+	transform: rotate(225deg);
+	top: 8px;
+}
+
+div.left-line.bottom.active {
+	transform: rotate(-225deg);
+}
+
+div.right-line.active, div.left-line.active {
+	height: 50%;
 }
 
 div.right-line {
 	left: 23px;
-}
-
-div.right-line.active {
-	height: 50%;
 }
 
 div.right-line.top.active {
@@ -244,18 +293,32 @@ div.right-line.bottom.active {
 	transform: rotate(225deg);
 }
 
-div.next_arrow:hover p.next-txt {
+ div.next_arrow:hover p.next-txt {
 	opacity: 0.7;
 	right: 80%;
 }
 
+div.prev_arrow:hover p.next-txt {
+	opacity: 1;
+	left: 50%;
+}
+
 div.next_arrow:hover div.line.top {
 	top: 14px;
-	transform: rotate(-245deg);
+	transform: rotate(295deg);
 }
 
 div.next_arrow:hover div.line.bottom {
-	transform: rotate(245deg);
+	transform: rotate(-295deg);
+}
+
+div.prev_arrow:hover div.line.top {
+	top: 14px;
+	transform: rotate(-295deg);
+}
+
+div.prev_arrow:hover div.line.bottom {
+	transform: rotate(295deg);
 }
 
 
