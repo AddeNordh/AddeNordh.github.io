@@ -33,23 +33,34 @@ main.main-content.prev {
 
 main.main-content .home-content {
     transition: all .5s ease;
-    opacity: 0;
-    transform: translateY(10%);
+
     margin: 1%;
     padding: 1%;
 	font-size: 18px;
 }
 
+main.main-content .home-content:not(.home-msg) {
+	opacity: 0;
+	transform: translateY(25%);
+}
+
 div.home-msg {
-	min-height: 200px;
+	min-height: 250px;
 }
 
 main.main-content p {
-	transform:translateX(5%);
+	transition: all .5s ease;
+	transform:translateY(100%);
+	opacity: 0;
 	min-width: 600px;
 	font-size: 18px;
 	line-height: 30px;
 	text-align: left;
+}
+
+main.main-content p.active {
+	opacity: 1;
+	transform: none;
 }
 
 @keyframes blink {50% { color: transparent }}
