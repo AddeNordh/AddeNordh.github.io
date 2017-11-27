@@ -100,17 +100,16 @@ div.work-wrapper {
 }
 
 div.work-wrapper .work-item {
-	transition: all 1s ease;
+	transition: all .7s ease;
 	width: 35%;
 	position: relative;
 	margin: 10px;
 	height: 45%;
-	opacity: 0;
-	transform:translateX(-10%);
+
 	cursor: pointer;
 }
 
-div.work-wrapper .work-item.slideIn-f-right {
+div.work-wrapper .work-item{
 	opacity: 1;
 	transform: none;
 }
@@ -205,7 +204,6 @@ div.line {
 	width: 2px;
 	background: #def;
 	position: relative;
-	left: 23px;
 	transform: rotate(0deg);
 }
 
@@ -218,13 +216,21 @@ div.next_arrow p.next-txt {
 	right: 3%;
 }
 
-div.line.active {
+div.right-line {
+	left: 23px;
+}
+
+div.right-line.active {
 	height: 50%;
 }
 
-div.line.top.active {
+div.right-line.top.active {
 	transform: rotate(-225deg);
 	top: 7px;
+}
+
+div.right-line.bottom.active {
+	transform: rotate(225deg);
 }
 
 div.next_arrow:hover p.next-txt {
@@ -241,15 +247,8 @@ div.next_arrow:hover div.line.bottom {
 	transform: rotate(245deg);
 }
 
-div.line.bottom.active {
-	transform: rotate(225deg);
-}
 
-.slideIn-f-rigth-fadeIn-2 {
-	right: 2%;
-}
-
-.slideUpp-FadeIn {
+.home-content.active {
     opacity: 1!important;
     transform: translateY(0)!important;
 }
