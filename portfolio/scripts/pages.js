@@ -3,6 +3,7 @@ function section(page, index) {
 	this.index = index;
 	this.menuBars = document.querySelectorAll(".nav-bar");
 	this.arrows = document.querySelectorAll(".line");
+	this.divToShow = this.page.querySelectorAll("ta");
 	this.childrenDiv = this.page.querySelectorAll("div");
 	this.childrenP = this.page.querySelectorAll("p");
 }
@@ -22,6 +23,7 @@ section.prototype.switch = function(current, desired, cctr, ccta, dctr, dcta) {
 
 
 section.prototype.addContent = function (page, cta, dir, done) {
+		addClass(page.divToShow, 100, null, cta);
 		setTimeout(() => {
 			addClass(navBars, 100, null, cta);
 			addClass(rightArrow, 100, null, cta);
