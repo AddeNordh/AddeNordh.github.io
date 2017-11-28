@@ -41,15 +41,15 @@ menuIcon.addEventListener("click", () => {
 
 
 
-for (let workItem of workItems) {
-	workItem.addEventListener("mouseover", () => {
-		let img = workItem.querySelector("img");
-		let src = img.src;
-		let itemInfo = workItem.querySelector(".work-item-info");
-		itemInfo.style.background = "url(" + src + ")";
-		itemInfo.style.backgroundSize = "cover";
-	});
-}
+// for (let workItem of workItems) {
+// 	workItem.addEventListener("mouseover", () => {
+// 		let img = workItem.querySelector("img");
+// 		let src = img.src;
+// 		let itemInfo = workItem.querySelector(".work-item-info");
+// 		itemInfo.style.background = "url(" + src + ")";
+// 		itemInfo.style.backgroundSize = "cover";
+// 	});
+// }
 
 
 for (let i = 0; i < pages.length; i++) {
