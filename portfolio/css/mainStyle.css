@@ -12,8 +12,10 @@
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);
-	 }
+	25% {border-right: 16px solid #F49501;}
+	50% {border-bottom: 16px solid #F49501;}
+	75% {border-left: 16px solid #F49501;}
+    100% { transform: rotate(360deg);}
 }
 
 .loader.active {
