@@ -4,6 +4,7 @@ html {
     height: 100%;
     padding: 0;
 	background: #2a2a2a;
+	overflow: hidden;
 }
 
 * {
@@ -25,4 +26,8 @@ a {
 
 b {
 	color: #F49501;
+}
+
+textarea {
+	resize: none;
 }
