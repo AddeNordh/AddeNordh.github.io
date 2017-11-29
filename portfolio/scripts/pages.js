@@ -26,6 +26,7 @@ section.prototype.addContent = function (page, cta, newPage, itemDelay, iDelay) 
 
 		if (newPage || init) {
 			setTimeout(() => {
+				init = false;
 				addClass(page.divToShow, itemDelay/3, null, cta);
 			},itemDelay)
 		}
@@ -53,5 +54,5 @@ section.prototype.clearContent = function (page, ctr) {
 		addClass(loader, 400, null, "active");
 		removeClass(loader, null, 2500, "active");
 	},250);
-	removeClass(page.childrenP, null, 100, ctr, 1.5);
+	removeClass(page.childrenP, null, 100, ctr, 2);
 };
