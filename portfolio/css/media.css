@@ -1,0 +1,32 @@
+@media screen and (max-width: 400px) {
+	body, html {
+		width: 100%;
+	}
+	main.main-content .home-content {
+		margin: 3%;
+		padding: 3%;
+		font-size: 15px;
+	}
+
+	main.main-content .home-msg {
+		height: 250px;
+	}
+
+	main.main-content p.greet-msg {
+		text-align: left;
+		min-width: 350px;
+		font-size: 15px;
+	}
+
+	.nav ul {
+		width: 100%;
+	}
+
+	.nav li.nav-item {
+		background: none;
+		margin: 20% 0px;
+		padding-left: 0;
+		text-align: center;
+	}
+
+}
