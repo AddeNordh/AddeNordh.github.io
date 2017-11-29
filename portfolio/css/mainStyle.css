@@ -1,30 +1,4 @@
 
-.loader {
-    border: 16px solid #1f1f1f;
-	transition: all .5s ease;
-    border-top: 16px solid #F49501;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-	position: absolute;
-	opacity: 0;
-	top: calc(50% - 60px);
-	left: calc(50% - 60px);
-	z-index: 200;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg) ; }
-	25% {border-right: 16px solid #F49501;}
-	50% {border-bottom: 16px solid #F49501;}
-	75% {border-left: 16px solid #F49501;}
-    100% { transform: rotate(360deg);}
-}
-
-.loader.active {
-	animation: spin 1.3s ease;
-	opacity: 1;
-}
 
 
 main.main-content:not(.active) {
@@ -46,7 +20,7 @@ main.main-content {
     display: flex;
     align-items: center;
     flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
     width: 100%;
 	transform-style: preserve-3d;
     height: 100%;
@@ -73,17 +47,19 @@ main.main-content .home-content:not(.home-msg) {
 }
 
 div.home-msg {
-	min-height: 250px;
+
+	min-height: 150px;
 }
 
-main.main-content p {
+main.main-content p.greet-msg {
 	transition: all .5s ease;
-	transform:translateY(150%);
+	transform:translateY(250%);
 	opacity: 0;
 	min-width: 600px;
 	font-size: 18px;
 	line-height: 30px;
 	text-align: left;
+	margin: 0;
 }
 
 main.main-content p.active {
@@ -155,8 +131,8 @@ div.work-item-info {
 	border-radius: 10px;
 	position: absolute;
 	transition: all .5s ease;
-	background: rgba(60,60,60,0.8);
-    width: 100%;
+	background: #1f1f1f;
+	box-shadow: inset 10px 9px 100px -25px #def;    width: 100%;
     height: 0%;
 	opacity: 0;
 }
