@@ -29,4 +29,8 @@
 		text-align: center;
 	}
 
+	div.work-wrapper .work-item {
+		width: 100%;
+	}
+
 }

@@ -9,11 +9,13 @@
 main.main-content:not(.active) {
 	left: 100%;
 	transform: perspective(1000px) rotateY(180deg);
+	display: none;
 }
 
 main.active {
 	left: 0;
 	transform: perspective(1000px) rotateY(0deg);
+	display: block;
 }
 
 main.main-content {
@@ -29,7 +31,6 @@ main.main-content {
     width: 100%;
 	transform-style: preserve-3d;
     height: 100%;
-	overflow-y: hidden;
 	background: #2f2f2f;
 }
 
