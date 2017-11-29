@@ -47,7 +47,6 @@ main.main-content .home-content:not(.home-msg) {
 }
 
 div.home-msg {
-
 	min-height: 150px;
 }
 
@@ -249,7 +248,7 @@ div.contact-wrapper {
 
 .input-wrapper {
 	position: relative;
-    margin: 10% 0%;
+    margin: 5% 0%;
 }
 
 .contact-input ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0px; height: 3px; z-index: 99;}
