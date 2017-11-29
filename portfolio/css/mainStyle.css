@@ -9,13 +9,13 @@
 main.main-content:not(.active) {
 	left: 100%;
 	transform: perspective(1000px) rotateY(180deg);
-	display: none;
+	overflow-y:hidden;
 }
 
 main.active {
 	left: 0;
 	transform: perspective(1000px) rotateY(0deg);
-	display: block;
+	overflow-y: auto;
 }
 
 main.main-content {

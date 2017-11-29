@@ -1,6 +1,6 @@
 .menu-logo {
 	transition: all .5s ease;
-	position: absolute;
+	position: fixed;
 	top: 2%;
 	cursor: pointer;
 	z-index: 100;
