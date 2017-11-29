@@ -14,16 +14,28 @@ const navBars = document.getElementsByClassName('nav-bar');
 const workItems = document.getElementsByClassName('work-item');
 const rightArrow = document.getElementsByClassName('right-line');
 const leftArrow = document.getElementsByClassName('left-line');
-const loader = document.getElementById('loader');
+const loader = document.getElementsByClassName('load');
+const inputs = document.getElementsByClassName('contact-input');
 let init = true;
 
 next.addEventListener("click", () => {
 	let current = pages[pageIndex];
 	let next = pages[pageIndex + 1];
 	current.clearContent(current, "active");
-	pages[pageIndex].switch(current, next, "active", "prev", "next", "active");
+	pages[pageIndex].switch(current, next, "active", "prev", "next", "active", 2500);
 	pageIndex++;
 });
+
+for (let i = 0; i < inputs.length; i++) {
+	inputs[i].addEventListener("keypress", (event) => {
+		if (inputs[i].value != "") {
+			inputs[i].classList.add("has-content");
+		}
+		else {
+			inputs[i].classList.remove("has-content");
+		}
+	})
+}
 
 
 menuIcon.addEventListener("click", () => {
@@ -61,4 +73,4 @@ setTimeout(() => {
 	sentace.type(greetmsg[0],fields[0], 15);
 },1200);
 
-pages[pageIndex].addContent(pages[pageIndex], "active", init, true);
+pages[pageIndex].addContent(pages[pageIndex], "active", false, 300, 1000);

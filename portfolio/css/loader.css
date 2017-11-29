@@ -7,6 +7,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 50;
+  display: none;
 
 }
 .container .circle-loader-wrap {
@@ -80,6 +81,10 @@
 
 .circle-loader-wrap.active {
 	opacity: 1;
+}
+
+.container.active {
+	display: block;
 }
 
 

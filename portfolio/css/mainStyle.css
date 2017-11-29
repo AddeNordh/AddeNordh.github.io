@@ -115,7 +115,9 @@ div.work-wrapper {
 }
 
 div.work-wrapper .work-item {
-	transition: all .7s ease;
+	opacity: 0;
+	transform: translateX(-10%);
+	transition: all .75s ease;
 	width: 35%;
 	position: relative;
 	margin: 10px;
@@ -123,7 +125,7 @@ div.work-wrapper .work-item {
 	cursor: pointer;
 }
 
-div.work-wrapper .work-item{
+div.work-wrapper .work-item.active{
 	opacity: 1;
 	transform: none;
 }
@@ -203,6 +205,86 @@ div.work-item img {
 	width: 100%;
 	height: 100%;
 	background-size: cover;
+}
+
+main.contact {
+	width: 100%;
+	height: 100%;
+	display: inline;
+	justify-content: baseline;
+	flex-direction: column;
+	padding: 7%;
+}
+
+main.contact p {
+	line-height: 25px;
+	letter-spacing: 1.2px;
+}
+
+div.contact-wrapper {
+	width: 50%;
+	position: relative;
+	top: 43%;
+	transform: translateY(-50%);
+}
+
+.input-wrapper {
+	position: relative;
+    margin: 10% 0%;
+}
+
+.contact-input ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0px; height: 3px; z-index: 99;}
+.contact-input ~ .focus-border:before,
+.contact-input ~ .focus-border:after{content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 100%; background-color: #F49501; transition: 0.75s ease;;}
+.contact-input ~ .focus-border:after{left: auto; right: 0;}
+.contact-input:focus ~ .focus-border:before,
+.contact-input:focus ~ .focus-border:after,
+.has-content.contact-input ~ .focus-border:before,
+.has-content.contact-input ~ .focus-border:after{width: 50%; transition: 0.4s;}
+.contact-input ~ label.ta{position: absolute; left: 0; width: auto; top: 0px; color: #def; transition: 0.5s; z-index: 1; letter-spacing: 0.5px; opacity: 0;}
+.contact-input:focus ~ label.ta, .has-content.contact-input ~ label.ta{top: -16px; font-size: 12px; color: #F49501; transition: 0.3s;}
+
+
+main.contact input {
+	transition: width .5s ease;
+	background: #2f2f2f;
+	width: 0px;
+	height: 40px;
+	outline: none;
+	color: #def;
+	border: none;
+	border-bottom: 0px solid #def;
+}
+
+main.contact textarea {
+	opacity: 0;
+	border: none;
+	outline: none;
+	padding: 10px;
+	background: rgba(63,63,63,0.6);
+	transition: all .5s ease;
+}
+
+main.contact textarea:focus {
+	box-shadow: 1px 0px 15px 1px #F49501;
+}
+
+main.contact input.active {
+	border-bottom: 2px solid #def;
+	width: 620px;
+}
+
+main.contact label.active {
+	top: 9px;
+	opacity: 1;
+}
+
+main.contact .focus-border.active {
+	width: 620px;
+}
+
+main.contact textarea.active {
+	opacity: 1;
 }
 
 div.next_arrow, div.prev_arrow {
