@@ -48,10 +48,10 @@ section.prototype.addContent = function (page, cta, newPage, itemDelay, iDelay) 
 
 section.prototype.clearContent = function (page, ctr) {
 	setTimeout(() => {
-		removeClass(page.childrenDiv, null, 100, ctr, 1.1);
+		removeClass(page.divToShow, null, 100, ctr, 1.1);
 		removeClass(page.menuBars, null, 100, ctr, 1.5);
 		removeClass(page.arrows, null, 100, ctr, 1.2);
-		addClass(loader, 400, null, "active");
+		addClass(loader, 600, null, "active");
 		removeClass(loader, null, 2500, "active");
 	},250);
 	removeClass(page.childrenP, null, 100, ctr, 2);

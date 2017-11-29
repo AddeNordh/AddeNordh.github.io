@@ -133,7 +133,7 @@ div.work-item-info {
 	border-radius: 10px;
 	position: absolute;
 	transition: all .5s ease;
-	background: #1f1f1f;
+	background: rgba(51,51,51, 0.8);
 	box-shadow: inset 10px 9px 100px -25px #def;    width: 100%;
     height: 0%;
 	opacity: 0;
@@ -254,7 +254,7 @@ div.contact-wrapper {
 
 .contact-input ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0px; height: 3px; z-index: 99;}
 .contact-input ~ .focus-border:before,
-.contact-input ~ .focus-border:after{content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 100%; background-color: #F49501; transition: 0.75s ease;;}
+.contact-input ~ .focus-border:after{content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 100%; background-color: #F49501; transition: 0.5s ease;;}
 .contact-input ~ .focus-border:after{left: auto; right: 0;}
 .contact-input:focus ~ .focus-border:before,
 .contact-input:focus ~ .focus-border:after,
@@ -273,6 +273,8 @@ main.contact input {
 	color: #def;
 	border: none;
 	border-bottom: 0px solid #def;
+	letter-spacing: 1.2px;
+	font-size: 14px;
 }
 
 main.contact div.home-content{
