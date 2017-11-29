@@ -21,7 +21,11 @@ let init = true;
 
 next.addEventListener("click", () => {
 	let current = pages[pageIndex];
+	if (current.index === pages.length - 1) {
+		return false;
+	}
 	let next = pages[pageIndex + 1];
+
 	current.clearContent(current, "active");
 	current.switch(current, next, "active", "prev", "next", "active", 2500);
 	pageIndex++;
