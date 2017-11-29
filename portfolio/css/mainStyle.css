@@ -217,8 +217,27 @@ main.contact {
 }
 
 main.contact p {
+	transition: all .55s ease;
 	line-height: 25px;
 	letter-spacing: 1.2px;
+	opacity: 0;
+	transform: translateX(5%);
+}
+
+main.contact h1 {
+	opacity: 0;
+	transition: all .55s ease;
+	transform: translateX(-5%);
+}
+
+main.contact p.active {
+	opacity: 1;
+	transform: translateY(0%);
+}
+
+main.contact h1.active {
+	opacity: 1;
+	transform: translateY(0%);
 }
 
 div.contact-wrapper {
@@ -254,6 +273,11 @@ main.contact input {
 	color: #def;
 	border: none;
 	border-bottom: 0px solid #def;
+}
+
+main.contact div.home-content{
+	margin: 3% 0%;
+	padding: 0;
 }
 
 main.contact textarea {
