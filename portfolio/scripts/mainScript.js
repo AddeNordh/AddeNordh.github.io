@@ -6,6 +6,7 @@ const pages = Array.from(document.querySelectorAll('.content'));
 let pageIndex = 0;
 const homeContentItems = document.getElementsByClassName('home-content');
 const greetmsg = ["Hello, I'm <b>Andreas Nordh</b> and I am a soon to be fullstack developer.", "Currently a freshman year student at <b>YRGO Gothenburg Sweden. </b><br>", "Feel free to take a look at my <b><a href='https://github.com/addenordh' target='_blank'> Github</a></b> to view some of my work <br>","Also you can take a contact me via <b>Nordh.Andreas@hotmail.com</b><span class='__dot'>.</span>"];
+const contactmsg = ""
 const fields = Array.from(document.getElementsByClassName('greet-msg'));
 const menuIcon = document.getElementById('nav-icon');
 const nav = document.getElementById('nav');
@@ -22,19 +23,19 @@ next.addEventListener("click", () => {
 	let current = pages[pageIndex];
 	let next = pages[pageIndex + 1];
 	current.clearContent(current, "active");
-	pages[pageIndex].switch(current, next, "active", "prev", "next", "active", 2500);
+	current.switch(current, next, "active", "prev", "next", "active", 2500);
 	pageIndex++;
 });
 
-for (let i = 0; i < inputs.length; i++) {
-	inputs[i].addEventListener("keypress", (event) => {
-		if (inputs[i].value != "") {
-			inputs[i].classList.add("has-content");
+for (let input of inputs) {
+	input.addEventListener("keyup", (event) => {
+		if (input.value !== "") {
+			input.classList.add("has-content");
 		}
 		else {
-			inputs[i].classList.remove("has-content");
+			input.classList.remove("has-content");
 		}
-	})
+	});
 }
 
 
@@ -51,17 +52,6 @@ menuIcon.addEventListener("click", () => {
 	}
 });
 
-
-
-// for (let workItem of workItems) {
-// 	workItem.addEventListener("mouseover", () => {
-// 		let img = workItem.querySelector("img");
-// 		let src = img.src;
-// 		let itemInfo = workItem.querySelector(".work-item-info");
-// 		itemInfo.style.background = "url(" + src + ")";
-// 		itemInfo.style.backgroundSize = "cover";
-// 	});
-// }
 
 
 for (let i = 0; i < pages.length; i++) {
