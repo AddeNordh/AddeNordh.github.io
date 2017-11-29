@@ -35,12 +35,10 @@ section.prototype.addContent = function (page, cta, newPage, itemDelay, iDelay) 
 
 
 	setTimeout(() => {
-		addClass(navBars, 100, null, cta);
-		addClass(rightArrow, 100, null, cta);
-		if (page.index > 0) {
-			addClass(leftArrow, 100, null, cta);
-		}
-	},iDelay);
+	 	addClass(navBars, 100, null, cta);
+		if (page.index < pages.length - 1) addClass(rightArrow, 100, null, cta);
+		if (page.index > 0) addClass(leftArrow, 100, null, cta);
+	}, iDelay);
 
 
 };
