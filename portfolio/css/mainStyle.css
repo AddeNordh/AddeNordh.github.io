@@ -8,7 +8,7 @@
 
 main.main-content:not(.active) {
 	left: 100%;
-	transform: perspective(1000px) rotateY(180deg);
+	transform: perspective(1000px) rotateY(0deg);
 	overflow-y:hidden;
 }
 
@@ -35,7 +35,7 @@ main.main-content {
 }
 
 main.main-content.prev {
-	transform: perspective(1000px)rotateY(-180deg);
+	transform: perspective(1000px)rotateY(90deg);
 	left: -100%;
 }
 
@@ -77,7 +77,7 @@ main.main-content p.active {
 .__dot { animation: 1s blink infinite }
 
 div.home-msg a, div.home-msg b {
-	color: #F49501;
+	color: #ffc203;
 	cursor: pointer;
 	transition: all .25s ease;
 }
@@ -190,7 +190,7 @@ div.work-wrapper .work-item {
 	width: 35%;
 	position: relative;
 	height: 45%;
-	width: 45%;
+	width: 47%;
 	cursor: pointer;
 }
 
